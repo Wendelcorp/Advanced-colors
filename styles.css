@@ -1,7 +1,8 @@
 body{
-  background-color: #EDEFF0;
+  background-image: url("geometry.png");
   font-family: helvetica, arial, sans-serif;
   box-sizing: border-box;
+
 }
 
 main {
@@ -24,8 +25,12 @@ h2 {
   clear: both;
   height: 30px;
   padding-top: 10px;
-  color: grey;
+  color: #C0C0C0;
+}
 
+.instructions p {
+  font-size: 12px;
+  letter-spacing: .5px;
 }
 
 .swatch-container {
@@ -39,7 +44,7 @@ h2 {
   float: left;
   overflow: hidden;
   box-shadow: 4px 7px 13px 0px rgba(0,0,0,0.16);
-  animation: fadein 4s;
+  animation: fadein 2s;
 
 }
 
@@ -56,8 +61,11 @@ h2 {
 }
 .color-name {
   position: absolute;
-  top: 165px;
+  top: 175px;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
+  font-weight: lighter;
+  color: grey;
+  letter-spacing: 1.5px;
 }

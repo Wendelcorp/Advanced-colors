@@ -17,6 +17,7 @@ h2 {
   font-size: 14px;
 }
 
+
 .swatch-container {
   background-color: white;
   border: 1px solid lightgrey;
@@ -27,9 +28,14 @@ h2 {
   border-radius: 5px;
   float: left;
   overflow: hidden;
-  -webkit-box-shadow: 4px 7px 13px 0px rgba(0,0,0,0.16);
-  -moz-box-shadow: 4px 7px 13px 0px rgba(0,0,0,0.16);
   box-shadow: 4px 7px 13px 0px rgba(0,0,0,0.16);
+  animation: fadein 4s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .swatch {
@@ -44,8 +50,4 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   width: 100%;
-}
-.btn {
-  position: absolute;
-  top: 190px;
 }

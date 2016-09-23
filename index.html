@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Advanced Colors</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <style>
+    .swatch {
+      height: 170px;
+      width: 160px;
+      float: left;
+      background-color: ;
+    }
+</style>
+  </head>
+  <body>
+
+      <div class="swatch"></div>
+      <div class="swatch"></div>
+      <div class="swatch"></div>
+      <div class="swatch"></div>
+      <div class="swatch"></div>
+  </body>
+
+  <script>
+  $('.swatch').on("click", function(){
+  var color ='#'+Math.random().toString(16).substr(2,6);
+  $(this).css('background-color', color);
+  });
+
+  for(var i=0; i<5; i++){
+    var color ='#'+Math.random().toString(16).substr(2,6);
+    $(".swatch").css('background-color', color[i]);
+  }
+  </script>
+  <script>
+    require('./renderer.js')
+  </script>
+</html>

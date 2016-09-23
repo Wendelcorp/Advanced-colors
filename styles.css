@@ -10,13 +10,23 @@ main {
   overflow: visible;
   margin-top: 70px;
   height: 300px;
+  text-align: center;
 }
+
+
 
 h2 {
   font-family: helvetica, arial;
   font-size: 14px;
 }
 
+.instructions {
+  clear: both;
+  height: 30px;
+  padding-top: 10px;
+  color: grey;
+
+}
 
 .swatch-container {
   background-color: white;

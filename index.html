@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Advanced Colors</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <style>
@@ -11,24 +12,50 @@
       width: 160px;
       float: left;
       background-color: ;
+      position: relative;
+    }
+    .color-name {
+      position: absolute;
+      top: 170px;
+    }
+    .btn {
+      position: absolute;
+      top: 190px;
     }
 </style>
   </head>
   <body>
 
-      <div class="swatch"></div>
-      <div class="swatch"></div>
-      <div class="swatch"></div>
-      <div class="swatch"></div>
-      <div class="swatch"></div>
+      <div class="swatch">
+        <h2 class="color-name"></h2>
+      </div>
+      <div class="swatch">
+        <h2 class="color-name"></h2>
+      </div>
+      <div class="swatch">
+        <h2 class="color-name"></h2>
+      </div>
+      <div class="swatch">
+        <h2 class="color-name"></h2>
+      </div>
+      <div class="swatch">
+        <h2 class="color-name"></h2>
+      </div>
   </body>
 
   <script>
   $('.swatch').on("click", function(){
   var color ='#'+Math.random().toString(16).substr(2,6);
   $(this).css('background-color', color);
+  $(this).find(".color-name").html(color);
   });
 
+  //not working, trying to prevent color code from triggering event
+  $('.color-name').on("click", function(event){
+    event.preventDefault();
+  });
+
+  //not working, trying to load an initial set of colors
   for(var i=0; i<5; i++){
     var color ='#'+Math.random().toString(16).substr(2,6);
     $(".swatch").css('background-color', color[i]);

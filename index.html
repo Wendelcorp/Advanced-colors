@@ -7,40 +7,89 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <style>
+
+    body{
+    	background-color: #EDEFF0;
+    	font-family: helvetica, arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: visible;
+      margin-top: 70px;
+      height: 300px;
+    }
+
+    h2 {
+      font-family: helvetica, arial;
+      font-size: 14px;
+    }
+
+    .swatch-container {
+      background-color: white;
+      border: 1px solid lightgrey;
+      position: relative;
+      height: 220px;
+      width: 150px;
+      margin: 4px;
+      border-radius: 5px;
+      float: left;
+      overflow: hidden;
+      -webkit-box-shadow: 4px 7px 13px 0px rgba(0,0,0,0.16);
+      -moz-box-shadow: 4px 7px 13px 0px rgba(0,0,0,0.16);
+      box-shadow: 4px 7px 13px 0px rgba(0,0,0,0.16);
+    }
+
     .swatch {
       height: 170px;
-      width: 160px;
-      float: left;
+      width: 150px;
       background-color: ;
       position: relative;
     }
     .color-name {
       position: absolute;
-      top: 170px;
+      top: 165px;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
     }
     .btn {
       position: absolute;
       top: 190px;
     }
+
 </style>
   </head>
   <body>
-
-      <div class="swatch">
-        <h2 class="color-name"></h2>
+    <main>
+      <div class="swatch-container">
+        <div class="swatch">
+          <h2 class="color-name"></h2>
+        </div>
       </div>
-      <div class="swatch">
-        <h2 class="color-name"></h2>
+      <div class="swatch-container">
+        <div class="swatch">
+          <h2 class="color-name"></h2>
+        </div>
       </div>
-      <div class="swatch">
-        <h2 class="color-name"></h2>
+      <div class="swatch-container">
+        <div class="swatch">
+          <h2 class="color-name"></h2>
+        </div>
       </div>
-      <div class="swatch">
-        <h2 class="color-name"></h2>
+      <div class="swatch-container">
+        <div class="swatch">
+          <h2 class="color-name"></h2>
+        </div>
       </div>
-      <div class="swatch">
-        <h2 class="color-name"></h2>
+      <div class="swatch-container">
+        <div class="swatch">
+          <h2 class="color-name"></h2>
+        </div>
       </div>
+    </main>
   </body>
 
   <script>

@@ -15,7 +15,6 @@ main {
 }
 
 
-
 h2 {
   font-family: helvetica, arial;
   font-size: 14px;
@@ -34,6 +33,7 @@ h2 {
 }
 
 .swatch-container {
+
   background-color: white;
   border: 1px solid lightgrey;
   position: relative;
@@ -45,6 +45,13 @@ h2 {
   overflow: hidden;
   box-shadow: 4px 7px 13px 0px rgba(0,0,0,0.16);
   animation: fadein 2s;
+
+
+}
+
+.swatch-container:hover {
+
+  top: -1px;
 
 }
 

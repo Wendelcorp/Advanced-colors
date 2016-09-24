@@ -1,4 +1,4 @@
-# Advanced-colors
+# Advanced Colors
 
 Advanced Colors is a lightening fast swatch tool for designers and developers. 
 

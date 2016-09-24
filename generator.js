@@ -33,15 +33,17 @@ $(function() {
 })
 
   // Copy hex code to clipboard
-
-  function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-  }
-
+// $("#color-1").on("click", function(){
+//   function copyToClipboard(element) {
+//     var $temp = $("<input>");
+//     $("body").append($temp);
+//     $temp.val($(element).text()).select();
+//     document.execCommand("copy");
+//     $temp.remove();
+//     var $copied = $(".copied")
+//     $copied.html("Copied to clipboard");
+//   }
+// });
 
 
 });

@@ -2,6 +2,7 @@ body{
   background-image: url("geometry.png");
   font-family: helvetica, arial, sans-serif;
   box-sizing: border-box;
+  text-align: center;
 
 }
 
@@ -9,7 +10,7 @@ main {
   max-width: 800px;
   margin: 0 auto;
   overflow: visible;
-  margin-top: 70px;
+  margin-top: 30px;
   height: 300px;
   text-align: center;
 }
@@ -30,6 +31,24 @@ h2 {
 .instructions p {
   font-size: 12px;
   letter-spacing: .5px;
+}
+
+.copied {
+  font-size: 12px;
+  letter-spacing: .5px;
+  margin: 0 auto;
+  color: darkgrey;
+  animation: fadeinout 1.7s ease-out forwards;
+}
+
+@-webkit-keyframes fadeinout {
+0%,100% { opacity: 0; }
+50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+0%,100% { opacity: 0; }
+50% { opacity: 1; }
 }
 
 .swatch-container {
@@ -76,4 +95,8 @@ h2 {
   color: grey;
   letter-spacing: 1.5px;
   cursor: crosshair;
+}
+
+.message {
+  height: 35px;
 }

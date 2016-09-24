@@ -22,6 +22,7 @@
   </head>
   <body>
     <main>
+      <div class="message"></div>
       <div class="swatch-container">
         <div id="1" class="swatch">
           <h2 onclick="copyToClipboard('#color-1')" id="color-1" class="color-name"></h2>
@@ -53,13 +54,17 @@
     </main>
   </body>
   <script>
-  function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-  }
+    function copyToClipboard(element) {
+      var $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+      $('.message').append("<p class='copied'>Copied to clipboard.</p>");
+      setTimeout(function() {
+        $(".copied").html("");
+      }, 1700);
+    }
   </script>
   <script>
     require('./renderer.js')

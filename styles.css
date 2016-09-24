@@ -26,6 +26,7 @@ h2 {
   height: 30px;
   padding-top: 10px;
   color: #C0C0C0;
+  -webkit-user-select: none;
 }
 
 .instructions p {
@@ -85,10 +86,15 @@ h2 {
   background-color: ;
   position: relative;
 }
+
+.swatch h2 {
+  -webkit-user-select: none;
+}
+
 .color-name-hex {
   /*visibility: hidden;*/
   position: absolute;
-  top: 175px;
+  top: 180px;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
@@ -101,7 +107,7 @@ h2 {
 .color-name-rgb {
   visibility: hidden;
   position: absolute;
-  top: 175px;
+  top: 180px;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
@@ -111,7 +117,22 @@ h2 {
   cursor: crosshair;
 }
 
+.color-name-word {
+  visibility: visible;
+  position: absolute;
+  top: 174px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  font-weight: lighter;
+  font-size: 6px;
+  color: grey;
+  letter-spacing: 1.5px;
+  cursor: crosshair;
+}
+
 
 .message {
   height: 35px;
+  -webkit-user-select: none;
 }

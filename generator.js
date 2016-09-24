@@ -17,6 +17,9 @@ $(function() {
     $("#" + i).find("#color-" + i + "-hex").html(color);
     var rgb = hexToRgb(color);
     $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
+    var match = ntc.name(color);
+    var word = match[1];
+    $("#" + i).find("#color-" + i + "-name" ).html(word);
   }
 
   // Gives a random palette on load
@@ -32,6 +35,9 @@ $(function() {
   $(this).find(".color-name-hex").html(color);
   var rgb = hexToRgb(color);
   $(this).find(".color-name-rgb" ).html(rgb);
+  var match = ntc.name(color);
+  var word = match[1];
+  $(this).find(".color-name-word" ).html(word);
   });
 
   // Prevent color name code from triggering event
@@ -53,6 +59,9 @@ $(function() {
           $("#" + i).find("#color-" + i + "-hex").html(color);
           var rgb = hexToRgb(color);
           $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
+          var match = ntc.name(color);
+          var word = match[1];
+          $("#" + i).find("#color-" + i + "-name" ).html(word);
           }
         }
     });
@@ -77,6 +86,9 @@ $(function() {
           $("#" + i).find("#color-" + i + "-hex").html(color);
           var rgb = hexToRgb(color);
           $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
+          var match = ntc.name(color);
+          var word = match[1];
+          $("#" + i).find("#color-" + i + "-name" ).html(word);
           }
         }
     else if (code === 77) { //m key for monochrome
@@ -86,6 +98,9 @@ $(function() {
           $("#" + i).find("#color-" + i + "-hex").html(color);
           var rgb = hexToRgb(color);
           $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
+          var match = ntc.name(color);
+          var word = match[1];
+          $("#" + i).find("#color-" + i + "-name" ).html(word);
           }
         }
     else if (code === 84) { //t key for themed colors
@@ -106,6 +121,9 @@ $(function() {
           $("#" + i).find("#color-" + i + "-hex").html(color);
           var rgb = hexToRgb(color);
           $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
+          var match = ntc.name(color);
+          var word = match[1];
+          $("#" + i).find("#color-" + i + "-name" ).html(word);
           }
         }
   };

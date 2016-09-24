@@ -85,7 +85,8 @@ h2 {
   background-color: ;
   position: relative;
 }
-.color-name {
+.color-name-hex {
+  /*visibility: hidden;*/
   position: absolute;
   top: 175px;
   text-transform: uppercase;
@@ -96,6 +97,20 @@ h2 {
   letter-spacing: 1.5px;
   cursor: crosshair;
 }
+
+.color-name-rgb {
+  visibility: hidden;
+  position: absolute;
+  top: 175px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  font-weight: lighter;
+  color: grey;
+  letter-spacing: 1.5px;
+  cursor: crosshair;
+}
+
 
 .message {
   height: 35px;

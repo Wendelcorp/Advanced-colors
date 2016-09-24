@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Advanced Colors</title>
+    <link rel="stylesheet" href="styles.css">
+
     <script src="jquery-3.1.1.slim.min.js"></script>
         <!-- <script>window.$ = window.jQuery = require('jquery');</script> -->
     <script>
@@ -16,35 +18,34 @@
     require('jquery').globalPaths.push(__dirname + '/node_modules');
     </script> -->
     <script src="generator.js"></script>
-    <link rel="stylesheet" href="styles.css">
 
   </head>
   <body>
     <main>
+      <div class="message"></div>
       <div class="swatch-container">
         <div id="1" class="swatch">
-          <h2 id="color-1" class="color-name"></h2>
+          <h2 onclick="copyToClipboard('#color-1')" id="color-1" class="color-name"></h2>
         </div>
       </div>
-      <!-- <button id="button-1" class="copy-button">Copy Hexcode</button> -->
       <div class="swatch-container">
         <div id="2" class="swatch">
-          <h2 class="color-name"></h2>
+          <h2 onclick="copyToClipboard('#color-2')" id="color-2" class="color-name"></h2>
         </div>
       </div>
       <div class="swatch-container">
         <div id="3" class="swatch">
-          <h2 class="color-name"></h2>
+          <h2 onclick="copyToClipboard('#color-3')" id="color-3" class="color-name"></h2>
         </div>
       </div>
       <div class="swatch-container">
         <div id="4" class="swatch">
-          <h2 class="color-name"></h2>
+          <h2 onclick="copyToClipboard('#color-4')" id="color-4" class="color-name"></h2>
         </div>
       </div>
       <div class="swatch-container">
         <div id="5" class="swatch">
-          <h2 class="color-name"></h2>
+          <h2 onclick="copyToClipboard('#color-5')" id="color-5" class="color-name"></h2>
         </div>
       </div>
       <div class="instructions">
@@ -52,7 +53,19 @@
       </div>
     </main>
   </body>
-
+  <script>
+    function copyToClipboard(element) {
+      var $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+      $('.message').append("<p class='copied'>Copied to clipboard.</p>");
+      setTimeout(function() {
+        $(".copied").html("");
+      }, 1700);
+    }
+  </script>
   <script>
     require('./renderer.js')
   </script>

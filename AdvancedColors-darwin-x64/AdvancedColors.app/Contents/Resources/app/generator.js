@@ -14,7 +14,7 @@ $(function() {
   $(this).find(".color-name").html(color);
   });
 
-  // not working, trying to prevent color code from triggering event
+  // Prevent color name code from triggering event
   $('h2.color-name').click(function( event ) {
   event.stopPropagation();
   });
@@ -33,25 +33,17 @@ $(function() {
 })
 
   // Copy hex code to clipboard
-
-  // $(".color").each(function(){
-  // 	var color = $(this).data('color');
-  // 	$(this)
-  // 		.css('background', color)
-  // 		.find('span').text(color);
-  // });
-  //
-  // var clipboard = new Clipboard('.color');
-  //
-  // clipboard.on('success', function(e) {
-  // 	$('.copied')
-  // 		.fadeIn(200)
-  // 		.delay(300)
-  // 		.fadeOut(200);
-  // 	// alert(e.text);
-  // 	e.clearSelection();
-  // });
-
+// $("#color-1").on("click", function(){
+//   function copyToClipboard(element) {
+//     var $temp = $("<input>");
+//     $("body").append($temp);
+//     $temp.val($(element).text()).select();
+//     document.execCommand("copy");
+//     $temp.remove();
+//     var $copied = $(".copied")
+//     $copied.html("Copied to clipboard");
+//   }
+// });
 
 
 });

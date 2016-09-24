@@ -112,6 +112,9 @@ $(function() {
           $("#" + i).find("#color-" + i + "-hex").html(color);
           var rgb = hexToRgb(color);
           $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
+          var match = ntc.name(color);
+          var word = match[1];
+          $("#" + i).find("#color-" + i + "-name" ).html(word);
           }
         }
     else if (code === 65) { //a key for anything

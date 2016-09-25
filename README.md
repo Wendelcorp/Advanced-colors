@@ -15,6 +15,14 @@ Press <strong>R</strong> to switch to RGB color codes.
 Press <strong>H</strong> to switch back to Hex color codes.  
 Press <strong>P</strong> to generate a pastel palette.  
 Press <strong>M</strong> to generate a monochrome palette.  
-Press <strong>T</strong> to generate a single color theme palette.  
+Press <strong>T</strong> to generate a single-color themed palette.  
+Press <strong>A</strong> to generate a totally random palette. 
 
 ### Enjoy!
+
+<br>
+
+#### Sources
+
+[Chirag Mehta - ntc.js](http://chir.ag/projects/name-that-color/#8EA494)  
+[David Merﬁeld - randomColor.js](https://github.com/davidmerfield/randomColor)

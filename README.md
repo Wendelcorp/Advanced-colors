@@ -19,8 +19,7 @@ Press <strong>T</strong> to generate a single-color themed palette.
 Press <strong>A</strong> to generate a totally random palette. 
 
 ### Enjoy!
-
-<br>
+Get v.1.0.0 at [AdvancedColors.com](http://advancedcolors.com/)
 
 #### Sources
 

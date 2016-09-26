@@ -12,7 +12,7 @@ $(function() {
 }
 
   // Palette reset
-  function resetSwatches(color) {
+  function resetSwatches(i, color) {
     $("#" + i).css('background-color', color);
     $("#" + i).find("#color-" + i + "-hex").html(color);
     var rgb = hexToRgb(color);
@@ -25,7 +25,7 @@ $(function() {
   // Gives a random palette on load
   for(var i=1; i<6; i++){
     var color = randomColor();
-    resetSwatches(color)
+    resetSwatches(i, color)
   }
 
   // Provides the on click functionality for each swatch
@@ -55,13 +55,7 @@ $(function() {
     if (e.keyCode === 32) {
       for(var i=1; i<6; i++){
           var color = randomColor();
-          $("#" + i).css('background-color', color);
-          $("#" + i).find("#color-" + i + "-hex").html(color);
-          var rgb = hexToRgb(color);
-          $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
-          var match = ntc.name(color);
-          var word = match[1];
-          $("#" + i).find("#color-" + i + "-name" ).html(word);
+          resetSwatches(i, color)
           }
         }
     });
@@ -82,25 +76,13 @@ $(function() {
     else if (code === 80) { //p key for pastel
       for(var i=1; i<6; i++){
           var color = randomColor({luminosity: 'light'});
-          $("#" + i).css('background-color', color);
-          $("#" + i).find("#color-" + i + "-hex").html(color);
-          var rgb = hexToRgb(color);
-          $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
-          var match = ntc.name(color);
-          var word = match[1];
-          $("#" + i).find("#color-" + i + "-name" ).html(word);
+          resetSwatches(i, color)
           }
         }
     else if (code === 77) { //m key for monochrome
       for(var i=1; i<6; i++){
           var color = randomColor({hue: 'monochrome'});
-          $("#" + i).css('background-color', color);
-          $("#" + i).find("#color-" + i + "-hex").html(color);
-          var rgb = hexToRgb(color);
-          $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
-          var match = ntc.name(color);
-          var word = match[1];
-          $("#" + i).find("#color-" + i + "-name" ).html(word);
+          resetSwatches(i, color)
           }
         }
     else if (code === 84) { //t key for themed colors
@@ -108,25 +90,13 @@ $(function() {
       var rand = colorArray[Math.floor(Math.random() * colorArray.length)];
       for(var i=1; i<6; i++){
           var color = randomColor({hue: rand});
-          $("#" + i).css('background-color', color);
-          $("#" + i).find("#color-" + i + "-hex").html(color);
-          var rgb = hexToRgb(color);
-          $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
-          var match = ntc.name(color);
-          var word = match[1];
-          $("#" + i).find("#color-" + i + "-name" ).html(word);
+          resetSwatches(i, color)
           }
         }
     else if (code === 65) { //a key for anything
       for(var i=1; i<6; i++){
           var color = randomColor({hue: 'random',luminosity: 'random'});
-          $("#" + i).css('background-color', color);
-          $("#" + i).find("#color-" + i + "-hex").html(color);
-          var rgb = hexToRgb(color);
-          $("#" + i).find("#color-" + i + "-rgb" ).html(rgb);
-          var match = ntc.name(color);
-          var word = match[1];
-          $("#" + i).find("#color-" + i + "-name" ).html(word);
+          resetSwatches(i, color)
           }
         }
   };

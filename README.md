@@ -1,6 +1,6 @@
 # Advanced Colors
 
-A lightening fast swatch tool for designers and developers.  
+A lightning fast swatch tool for designers and developers.  
 </br>
 <em>Built for OSX</em>
 </br>
